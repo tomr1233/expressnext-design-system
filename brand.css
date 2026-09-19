@@ -1,0 +1,87 @@
+/* ===================================================================
+   ExpressNext — BRAND PRIMITIVES
+   The single source of truth for every colour, radius, shadow and
+   motion value in the estate.
+
+   Application code must never reference these directly. Consume a
+   mapping instead: shadcn.css (app surfaces) or deck.css (sales
+   surfaces). See USAGE.md.
+
+   Derived from the Porsche-mirror token set in the bolt-slides deck,
+   recoloured to ExpressNext cyan.
+   =================================================================== */
+:root {
+  /* --- Ground -----------------------------------------------------
+     Hue-neutral dark contrast scale. Kept from the reference set:
+     neutral greys read as engineered, and let cyan carry all colour. */
+  --xn-ink-900: #01020a;                     /* page ground          */
+  --xn-ink-850: rgba(227, 228, 229, 0.04);   /* surface              */
+  --xn-ink-800: rgba(227, 228, 229, 0.07);   /* surface, raised      */
+
+  /* --- Ink -------------------------------------------------------- */
+  --xn-fg:       #e3e4e5;
+  --xn-fg-muted: #9b9c9e;
+  --xn-fg-faint: #626669;
+
+  /* --- Hairlines -------------------------------------------------- */
+  --xn-hair:   rgba(227, 228, 229, 0.13);
+  --xn-hair-2: rgba(227, 228, 229, 0.07);
+
+  /* --- Cyan ramp --------------------------------------------------
+     One hue (195). Only lightness and chroma move. There is no
+     second brand hue. */
+  --xn-cyan-300: oklch(0.85 0.12 195);
+  --xn-cyan-400: oklch(0.80 0.14 195);
+  --xn-cyan-500: oklch(0.75 0.15 195);       /* THE brand colour     */
+  --xn-cyan-600: oklch(0.68 0.14 195);
+  --xn-cyan-700: oklch(0.55 0.12 195);
+
+  /* --- Accent gradient --------------------------------------------
+     Mirrors the reference's four-stop 115deg structure.
+     Reserved for hero/CTA moments: at most one per viewport. */
+  --xn-accent: linear-gradient(
+    115deg,
+    var(--xn-cyan-300) 0%,
+    var(--xn-cyan-400) 38%,
+    var(--xn-cyan-500) 70%,
+    var(--xn-cyan-700) 100%
+  );
+  --xn-accent-ink: var(--xn-ink-900);
+
+  /* --- Geometry — engineered, not soft ---------------------------- */
+  --xn-radius-sm: 4px;
+  --xn-radius:    8px;
+  --xn-radius-lg: 12px;
+
+  /* --- Depth ------------------------------------------------------ */
+  --xn-shadow: 0 8px 40px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.06);
+  --xn-glow:   0 16px 48px -32px oklch(0.75 0.15 195 / 0.4);
+
+  /* Cyan wash for page-level atmosphere (hero glows, gradient grounds).
+     Kept here rather than in a mapping so the tint tracks the brand hue. */
+  --xn-tint-strong: oklch(0.75 0.15 195 / 0.09);
+  --xn-tint-soft:   oklch(0.75 0.15 195 / 0.04);
+
+  /* --- Motion ----------------------------------------------------- */
+  --xn-dur:  0.4s;
+  --xn-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* --- State ------------------------------------------------------
+     Semantic only. Deliberately NOT brand hues, and never used as
+     decoration. --xn-danger being red does not reopen the
+     single-hue decision: it is a state, not the brand. */
+  --xn-danger:  oklch(0.55 0.20 25);
+  --xn-warning: oklch(0.80 0.15 85);
+  --xn-success: oklch(0.70 0.18 145);
+
+  /* --- Chart ramp -------------------------------------------------
+     The ONE exception to the single-hue rule: series must be
+     distinguishable, so hues are spread deliberately. Cyan leads.
+     PROVISIONAL — these five values were not part of the agreed
+     spec and are open for review. */
+  --xn-chart-1: oklch(0.75 0.15 195);  /* cyan    */
+  --xn-chart-2: oklch(0.70 0.18 145);  /* green   */
+  --xn-chart-3: oklch(0.80 0.15 85);   /* amber   */
+  --xn-chart-4: oklch(0.70 0.19 330);  /* magenta */
+  --xn-chart-5: oklch(0.65 0.17 265);  /* indigo  */
+}

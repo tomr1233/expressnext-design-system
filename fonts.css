@@ -1,0 +1,55 @@
+/* ===================================================================
+   ExpressNext — TYPE
+
+   Self-hosted via @fontsource. No Google Fonts <link>, no external
+   request at runtime.
+
+   Barlow has NO variable build on @fontsource (verified against the
+   registry), so display and body load explicit static weights. Only
+   JetBrains Mono is variable.
+
+   Retired estate-wide: Inter, Outfit, Playfair Display.
+   =================================================================== */
+
+/* Body — Barlow 400/500 */
+@import "@fontsource/barlow/400.css";
+@import "@fontsource/barlow/500.css";
+
+/* Display — Barlow Condensed 600/700 */
+@import "@fontsource/barlow-condensed/600.css";
+@import "@fontsource/barlow-condensed/700.css";
+
+/* Data — JetBrains Mono, variable */
+@import "@fontsource-variable/jetbrains-mono/index.css";
+
+:root {
+  --xn-font-display: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  --xn-font-body:    "Barlow", system-ui, sans-serif;
+  --xn-font-data:    "JetBrains Mono Variable", "JetBrains Mono", ui-monospace,
+                     monospace;
+}
+
+/* ---------------------------------------------------------------
+   THE MONO RULE
+   If a value is a number, an identifier, or something a reader might
+   compare against another value, it is mono. Prices, metrics, IDs,
+   timestamps, counts, code. Always.
+
+   Applied here for plain HTML so it holds without component work.
+   --------------------------------------------------------------- */
+code,
+kbd,
+samp,
+pre,
+time,
+data,
+output,
+.xn-data {
+  font-family: var(--xn-font-data);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tabular figures wherever numbers are compared in a column. */
+table {
+  font-variant-numeric: tabular-nums;
+}

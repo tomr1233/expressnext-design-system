@@ -1,0 +1,90 @@
+/* ===================================================================
+   Tailwind v4 theme bridge
+
+   Exposes the mapped slots to Tailwind utilities (bg-background,
+   text-muted-foreground, font-display, rounded-lg, ...).
+
+   FOR TAILWIND v4 ONLY. v3 consumers use tailwind-preset.js instead.
+
+   Import order matters:
+     @import "tailwindcss";
+     @import "expressnext-design-system/brand.css";
+     @import "expressnext-design-system/shadcn.css";
+     @import "expressnext-design-system/fonts.css";
+     @import "expressnext-design-system/theme.css";
+   =================================================================== */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* State — available as utilities, for semantic use only */
+  --color-success: var(--xn-success);
+  --color-warning: var(--xn-warning);
+
+  /* Type: font-display / font-sans / font-mono */
+  --font-display: var(--xn-font-display);
+  --font-sans: var(--xn-font-body);
+  --font-mono: var(--xn-font-data);
+
+  /* Geometry */
+  --radius-sm: var(--xn-radius-sm);
+  --radius-md: var(--xn-radius);
+  --radius-lg: var(--xn-radius-lg);
+
+  /* Depth */
+  --shadow-xn: var(--xn-shadow);
+  --shadow-glow: var(--xn-glow);
+
+  /* Motion */
+  --ease-xn: var(--xn-ease);
+}
+
+/* Base ground + body type, so a consuming app is on-brand before any
+   component is styled. */
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--xn-font-body);
+  }
+}

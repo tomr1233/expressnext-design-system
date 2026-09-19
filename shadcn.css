@@ -1,0 +1,81 @@
+/* ===================================================================
+   MAPPING — shadcn/ui + Radix slots  ->  ExpressNext primitives
+
+   For APP surfaces: onboarding, dashboards, intake and booking forms.
+   Requires brand.css to be imported first.
+
+   Every value here is a var(). A literal colour in this file is a bug.
+   =================================================================== */
+:root {
+  --background:            var(--xn-ink-900);
+  --foreground:            var(--xn-fg);
+
+  --card:                  var(--xn-ink-850);
+  --card-foreground:       var(--xn-fg);
+
+  --popover:               var(--xn-ink-850);
+  --popover-foreground:    var(--xn-fg);
+
+  --primary:               var(--xn-cyan-500);
+  --primary-foreground:    var(--xn-ink-900);
+
+  --secondary:             var(--xn-ink-800);
+  --secondary-foreground:  var(--xn-fg);
+
+  --muted:                 var(--xn-ink-800);
+  --muted-foreground:      var(--xn-fg-muted);
+
+  --accent:                var(--xn-ink-800);
+  --accent-foreground:     var(--xn-fg);
+
+  --destructive:           var(--xn-danger);
+  --destructive-foreground: var(--xn-fg);
+
+  --border:                var(--xn-hair);
+  --input:                 var(--xn-ink-850);
+  --ring:                  var(--xn-cyan-500);
+
+  --chart-1: var(--xn-chart-1);
+  --chart-2: var(--xn-chart-2);
+  --chart-3: var(--xn-chart-3);
+  --chart-4: var(--xn-chart-4);
+  --chart-5: var(--xn-chart-5);
+
+  --radius: var(--xn-radius);
+
+  /* Sidebar slots — shadcn defines these; map them so the sidebar
+     block works without per-repo patching. */
+  --sidebar:                       var(--xn-ink-850);
+  --sidebar-foreground:            var(--xn-fg);
+  --sidebar-primary:               var(--xn-cyan-500);
+  --sidebar-primary-foreground:    var(--xn-ink-900);
+  --sidebar-accent:                var(--xn-ink-800);
+  --sidebar-accent-foreground:     var(--xn-fg);
+  --sidebar-border:                var(--xn-hair);
+  --sidebar-ring:                  var(--xn-cyan-500);
+}
+
+/* The system has one mode: dark. `.dark` is mapped to the same values
+   so any shadcn component or block that assumes a dark class still
+   renders correctly, rather than falling back to stock neutrals. */
+.dark {
+  --background:            var(--xn-ink-900);
+  --foreground:            var(--xn-fg);
+  --card:                  var(--xn-ink-850);
+  --card-foreground:       var(--xn-fg);
+  --popover:               var(--xn-ink-850);
+  --popover-foreground:    var(--xn-fg);
+  --primary:               var(--xn-cyan-500);
+  --primary-foreground:    var(--xn-ink-900);
+  --secondary:             var(--xn-ink-800);
+  --secondary-foreground:  var(--xn-fg);
+  --muted:                 var(--xn-ink-800);
+  --muted-foreground:      var(--xn-fg-muted);
+  --accent:                var(--xn-ink-800);
+  --accent-foreground:     var(--xn-fg);
+  --destructive:           var(--xn-danger);
+  --destructive-foreground: var(--xn-fg);
+  --border:                var(--xn-hair);
+  --input:                 var(--xn-ink-850);
+  --ring:                  var(--xn-cyan-500);
+}

@@ -1,0 +1,64 @@
+/* ===================================================================
+   MAPPING — deck / atmosphere slots  ->  ExpressNext primitives
+
+   For SALES surfaces: slide decks, VSLs, landing pages. Fills the
+   token names the bolt-slides deck components already read.
+   Requires brand.css to be imported first.
+
+   Every value here is a var(). A literal colour in this file is a bug.
+
+   Replaces the deck's local src/styles/tokens.css. Variable NAMES are
+   unchanged, so no component edits are needed.
+   =================================================================== */
+:root {
+  /* Surfaces */
+  --bg:        var(--xn-ink-900);
+  --surface:   var(--xn-ink-850);
+  --surface-2: var(--xn-ink-800);
+
+  /* The reference tinted the page glow with its accent. Cyan now. */
+  --bg-grad-1: var(--xn-tint-strong);
+  --bg-grad-2: var(--xn-tint-soft);
+
+  /* Ink */
+  --fg:       var(--xn-fg);
+  --fg-muted: var(--xn-fg-muted);
+  --fg-faint: var(--xn-fg-faint);
+
+  /* Hairlines */
+  --hair:   var(--xn-hair);
+  --hair-2: var(--xn-hair-2);
+
+  /* Accent */
+  --primary:    var(--xn-cyan-500);
+  --accent:     var(--xn-accent);
+  --accent-ink: var(--xn-accent-ink);
+
+  /* Geometry */
+  --radius-sm: var(--xn-radius-sm);
+  --radius:    var(--xn-radius);
+  --radius-lg: var(--xn-radius-lg);
+
+  /* Depth */
+  --shadow: var(--xn-shadow);
+  --glow:   var(--xn-glow);
+
+  /* Motion */
+  --dur:         var(--xn-dur);
+  --ease:        var(--xn-ease);
+  --ease-spring: var(--xn-ease);
+
+  /* Type */
+  --font-head: var(--xn-font-display);
+  --font-body: var(--xn-font-body);
+  --font-mono: var(--xn-font-data);
+
+  /* --- Deck-local, deliberately NOT brand ------------------------
+     Atmosphere and layout are per-surface composition choices, not
+     identity. A deck may override these; it may not override colour.
+     Defaults carried over from the reference set. */
+  --grain:    0.016;
+  --vignette: rgba(0, 0, 0, 0.12);
+  --gutter:   clamp(28px, 6vw, 120px);
+  --gutter-y: clamp(40px, 8vh, 96px);
+}

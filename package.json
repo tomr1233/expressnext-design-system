@@ -1,0 +1,26 @@
+{
+  "name": "expressnext-design-system",
+  "version": "1.0.0",
+  "description": "ExpressNext brand primitives and token mappings. Dark ground, one cyan hue, Barlow + JetBrains Mono.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "tailwind-preset.js",
+  "files": [
+    "brand.css",
+    "shadcn.css",
+    "deck.css",
+    "fonts.css",
+    "theme.css",
+    "tailwind-preset.js",
+    "USAGE.md"
+  ],
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource/barlow": "^5.3.0",
+    "@fontsource/barlow-condensed": "^5.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomr1233/expressnext-design-system.git"
+  }
+}
