@@ -6,7 +6,7 @@ the marketing site, and every client-facing app.
 Dark ground. One cyan hue. Barlow + JetBrains Mono. Every number in mono.
 
 ```bash
-npm i github:tomr1233/expressnext-design-system#v1.0.0
+npm i github:tomr1233/expressnext-design-system#v2.0.0
 ```
 
 **[USAGE.md](./USAGE.md) is the contract** — which files to import for which
@@ -28,7 +28,11 @@ One palette, two mappings: `brand.css` defines each value once, and both token
 vocabularies in the estate — shadcn's `--background/--foreground/...` and the
 deck's `--bg/--fg/--hair/...` — resolve back to it. Change the cyan in one place.
 
-v1 is **tokens only**. No components; they get added when a second repo needs the
+v2 retires Barlow Condensed: display is Barlow 600/700 at `-0.025em`, one sans across
+the estate. It also adds the focus ring, pill radius, control heights and the fast
+(hover) duration to `brand.css`, and weight, leading and tracking tokens to `fonts.css`.
+
+The package is still **tokens only**. No components; they get added when a second repo needs the
 same one.
 
 ## Design decisions

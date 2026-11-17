@@ -8,7 +8,7 @@ Full spec and the reasoning behind each decision:
 ## Install
 
 ```bash
-npm i github:tomr1233/expressnext-design-system#v1.0.0
+npm i github:tomr1233/expressnext-design-system#v2.0.0
 ```
 
 Pinned by tag on purpose. A brand tweak is a bump you choose, not a surprise.
@@ -88,7 +88,7 @@ needed. It replaces the deck's local `src/styles/tokens.css`.
 
 | Role | Family | Weights | Applies to |
 |---|---|---|---|
-| Display | Barlow Condensed | 600, 700 | Headlines, big numbers, section titles |
+| Display | Barlow | 600, 700 | Headlines, big numbers, section titles. Tracking `--xn-tracking-display` (`-0.025em`) |
 | Body | Barlow | 400, 500 | Prose, labels, buttons |
 | Data | JetBrains Mono | variable | Every number, ID, price, metric, timestamp, code |
 
@@ -98,7 +98,7 @@ something a reader might compare against another value, it is mono. Use
 recognisable thing about the system.
 
 Barlow has no variable build on @fontsource, so only the listed static weights
-are loaded. Using Barlow 600 or Barlow Condensed 400 will silently synthesise —
+are loaded. Using Barlow 300 or 800 will silently synthesise —
 add the weight to `fonts.css` instead.
 
 ### Never

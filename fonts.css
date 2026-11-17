@@ -4,6 +4,10 @@
    Self-hosted via @fontsource. No Google Fonts <link>, no external
    request at runtime.
 
+   V2: display is Barlow, not Barlow Condensed. One sans across the
+   estate. Barlow's normal-width forms need tighter tracking than the
+   condensed face did, so display sets at -0.025em (v1: -0.01em).
+
    Barlow has NO variable build on @fontsource (verified against the
    registry), so display and body load explicit static weights. Only
    JetBrains Mono is variable.
@@ -15,18 +19,31 @@
 @import "@fontsource/barlow/400.css";
 @import "@fontsource/barlow/500.css";
 
-/* Display — Barlow Condensed 600/700 */
-@import "@fontsource/barlow-condensed/600.css";
-@import "@fontsource/barlow-condensed/700.css";
+/* Display — Barlow 600/700 */
+@import "@fontsource/barlow/600.css";
+@import "@fontsource/barlow/700.css";
 
 /* Data — JetBrains Mono, variable */
 @import "@fontsource-variable/jetbrains-mono/index.css";
 
 :root {
-  --xn-font-display: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  --xn-font-display: "Barlow", system-ui, sans-serif;
   --xn-font-body:    "Barlow", system-ui, sans-serif;
   --xn-font-data:    "JetBrains Mono Variable", "JetBrains Mono", ui-monospace,
                      monospace;
+
+  /* Weights actually loaded — anything else synthesises. */
+  --xn-weight-body:           400;
+  --xn-weight-body-strong:    500;
+  --xn-weight-display:        600;
+  --xn-weight-display-strong: 700;
+
+  /* Display sets tight. Labels are uppercase mono, tracked wide. */
+  --xn-leading-tight:     1.05;
+  --xn-leading-snug:      1.25;
+  --xn-leading-body:      1.6;
+  --xn-tracking-display: -0.025em;
+  --xn-tracking-label:    0.14em;
 }
 
 /* ---------------------------------------------------------------

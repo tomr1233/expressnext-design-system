@@ -52,10 +52,18 @@
   --xn-radius-sm: 4px;
   --xn-radius:    8px;
   --xn-radius-lg: 12px;
+  --xn-radius-pill: 999px;
+
+  /* Control heights (shadcn-derived, kept exact) */
+  --xn-control-sm: 32px;
+  --xn-control:    36px;
+  --xn-control-lg: 40px;
 
   /* --- Depth ------------------------------------------------------ */
   --xn-shadow: 0 8px 40px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.06);
   --xn-glow:   0 16px 48px -32px oklch(0.75 0.15 195 / 0.4);
+  /* Focus ring: 3px of brand cyan at 35%. Every focusable control. */
+  --xn-ring:   0 0 0 3px oklch(0.75 0.15 195 / 0.35);
 
   /* Cyan wash for page-level atmosphere (hero glows, gradient grounds).
      Kept here rather than in a mapping so the tint tracks the brand hue. */
@@ -63,7 +71,8 @@
   --xn-tint-soft:   oklch(0.75 0.15 195 / 0.04);
 
   /* --- Motion ----------------------------------------------------- */
-  --xn-dur:  0.4s;
+  --xn-dur:      0.4s;
+  --xn-dur-fast: 0.2s;                       /* hovers               */
   --xn-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
 
   /* --- State ------------------------------------------------------
